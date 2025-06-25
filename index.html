@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bojja Veera Ram Prasad - Janasena Leader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --janasena-red: #b41f2c;
+            --janasena-white: #ffffff;
+            --light-grey: #f5f5f5;
+            --dark-grey: #333333;
+            --text-dark: #2c2c2c;
+            --text-light: #666666;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--janasena-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--janasena-red);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--janasena-red);
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--janasena-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--janasena-red);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--janasena-red);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--janasena-red);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--light-grey) 0%, var(--janasena-white) 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 40%, rgba(180, 31, 44, 0.05) 50%, transparent 60%);
+            transform: skewX(-15deg);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--janasena-red);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--janasena-red);
+            color: var(--janasena-white);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(180, 31, 44, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(180, 31, 44, 0.4);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            background: var(--janasena-white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+.about-image {
+    width: 100%;
+    height: 400px;
+    background: var(--light-grey);
+    border-radius: 15px;
+    overflow: hidden; /* ensures the image respects border radius */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fills the space and maintains aspect ratio */
+    display: block;
+}
+
+
+        .about-text h3 {
+            font-size: 2rem;
+            color: var(--janasena-red);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .about-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .detail-item {
+            background: var(--light-grey);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--janasena-red);
+        }
+
+        .detail-item strong {
+            color: var(--janasena-red);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== CONTRIBUTIONS SECTION ===== */
+        .contributions {
+            background: var(--light-grey);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--janasena-red);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 3rem 0;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 55%;
+        }
+
+        .timeline-content {
+            background: var(--janasena-white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .timeline-year {
+            background: var(--janasena-red);
+            color: var(--janasena-white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: var(--janasena-red);
+            border-radius: 50%;
+            top: 2rem;
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -33px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -33px;
+        }
+
+        /* ===== WELFARE SECTION ===== */
+        .welfare {
+            background: var(--janasena-white);
+        }
+
+        .welfare-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .welfare-card {
+            background: var(--light-grey);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--janasena-red);
+        }
+
+        .welfare-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .welfare-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .welfare-card h4 {
+            font-size: 1.3rem;
+            color: var(--janasena-red);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .welfare-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ===== GALLERY SECTION ===== */
+        .gallery {
+            background: var(--light-grey);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            background: var(--janasena-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            background: var(--light-grey);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .gallery-caption {
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* ===== BLOG SECTION ===== */
+        .blog {
+            background: var(--janasena-white);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: var(--light-grey);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .blog-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--janasena-red);
+            margin-bottom: 1rem;
+        }
+
+        .blog-excerpt {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            color: var(--janasena-red);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--text-dark);
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            background: var(--light-grey);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            color: var(--janasena-red);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item strong {
+            color: var(--janasena-red);
+        }
+
+        .volunteer-form {
+            background: var(--janasena-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .volunteer-form h3 {
+            font-size: 1.8rem;
+            color: var(--janasena-red);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--light-grey);
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--janasena-red);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--janasena-red);
+            color: var(--janasena-white);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .submit-btn:hover {
+            background: #9a1a24;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--janasena-red);
+            color: var(--janasena-white);
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-content p {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--janasena-white);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-links a:hover {
+            opacity: 1;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-details {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: calc(100% - 60px);
+                left: 60px !important;
+            }
+
+            .timeline-item::before {
+                left: -33px !important;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero {
+                padding: 100px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .welfare-grid,
+            .gallery-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="container">
+            <a href="#home" class="logo">Janasena Path</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contributions">Contributions</a></li>
+                <li><a href="#welfare">Welfare</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Bojja Veera Ram Prasad</h1>
+                    <p class="subtitle">My Path with Janasena – Driven by Duty</p>
+                    <p class="description">Proud Janasena leader from Virawada, dedicated to political service, animal rescue, and social upliftment.</p>
+                    <a href="#about" class="cta-button">Explore My Journey</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+    <img src="./ram.png" alt="Professional Portrait Image" />
+</div>
+                    <div class="about-text">
+                        <h3>A Leader Committed to Service</h3>
+                        <p>Inspired by the vision of Pawan Kalyan Garu, I joined Janasena Party in 2014 with a commitment to serve my community and uphold the values of justice, integrity, and social welfare. My journey from a grassroots volunteer to an MPTC representative reflects my dedication to meaningful political service.</p>
+                        
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <strong>Education:</strong>
+                                B.Com Graduate
+                            </div>
+                            <div class="detail-item">
+                                <strong>Community:</strong>
+                                Kapu (OC)
+                            </div>
+                            <div class="detail-item">
+                                <strong>Location:</strong>
+                                Virawada, Pithapuram
+                            </div>
+                            <div class="detail-item">
+                                <strong>Constituency:</strong>
+                                Kakinada District
+                            </div>
+                        </div>
+
+                        <p>My political journey has been guided by the principle that true leadership means serving those who need it most. From animal welfare to community development, every initiative I undertake is rooted in the Janasena ideology of selfless service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTRIBUTIONS SECTION -->
+        <section id="contributions" class="contributions section-padding">
+            <div class="container">
+                <h2 class="section-title">My Political Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2014</div>
+                            <h3 class="timeline-title">Joined Janasena Party</h3>
+                            <p class="timeline-description">Inspired by Pawan Kalyan Garu's vision for social justice and political reform, I became an active member of Janasena Party, beginning my journey in grassroots politics.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2015</div>
+                            <h3 class="timeline-title">Community Organizer</h3>
+                            <p class="timeline-description">Started organizing community welfare programs and became a voice for local issues in Virawada, establishing strong connections with constituents.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2018</div>
+                            <h3 class="timeline-title">Animal Welfare Initiative</h3>
+                            <p class="timeline-description">Launched major cow rescue operations as Gau Rakshak, successfully rescuing over 1000 cows and establishing animal welfare as a key priority.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2019</div>
+                            <h3 class="timeline-title">MPTC Representative</h3>
+                            <p class="timeline-description">Elected as MPTC, representing the people of Virawada and working on infrastructure development, healthcare access, and educational initiatives.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2020</div>
+                            <h3 class="timeline-title">Pandemic Relief Work</h3>
+                            <p class="timeline-description">Led COVID-19 relief efforts, organizing food distribution, medical assistance, and support for affected families during the challenging pandemic period.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2021</div>
+                            <h3 class="timeline-title">Welfare Trust Leadership</h3>
+                            <p class="timeline-description">Appointed as Vice President of a welfare trust, expanding social service initiatives and implementing sustainable community development programs.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <h3 class="timeline-title">Policy Advocacy</h3>
+                            <p class="timeline-description">Successfully banned weekly cow sales in Pithapuram, demonstrating commitment to animal rights and ethical governance at the policy level.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2025</div>
+                            <h3 class="timeline-title">Continued Service</h3>
+                            <p class="timeline-description">Expanding outreach programs and strengthening Janasena's presence in the region while maintaining focus on grassroots development and social justice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WELFARE SECTION -->
+        <section id="welfare" class="welfare section-padding">
+            <div class="container">
+                <h2 class="section-title">My Mission Beyond Politics</h2>
+                <div class="welfare-grid">
+                    <div class="welfare-card">
+                        <div class="welfare-icon">🐄</div>
+                        <h4>Gau Rakshak Initiative</h4>
+                        <p>Successfully rescued over 2,500+ cows from dangerous situations, providing them with safe shelter and medical care. This initiative reflects our commitment to protecting innocent animals and upholding dharmic values.</p>
+                    </div>
+                    <div class="welfare-card">
+                        <div class="welfare-icon">❌</div>
+                        <h4>Policy Reform</h4>
+                        <p>Led the successful campaign to ban weekly cow sales in Pithapuram, creating a precedent for animal rights protection and demonstrating effective policy advocacy at the grassroots level.</p>
+                    </div>
+                    <div class="welfare-card">
+                        <div class="welfare-icon">👥</div>
+                        <h4>Welfare Trust Leadership</h4>
+                        <p>Serving as Vice President of a prominent welfare trust, overseeing multiple community development projects and ensuring transparent, effective delivery of social services.</p>
+                    </div>
+                    <div class="welfare-card">
+                        <div class="welfare-icon">🍛</div>
+                        <h4>Community Infrastructure</h4>
+                        <p>Organized hospital food services, installed community benches, erected inspirational statues, and established chalivendrams to support the spiritual and practical needs of our community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section id="gallery" class="gallery section-padding">
+            <div class="container">
+                <h2 class="section-title">Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-image">[Community Meeting Image]</div>
+                        <div class="gallery-caption">Community Outreach Program</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">[Cow Rescue Image]</div>
+                        <div class="gallery-caption">Gau Rakshak Mission</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">[Political Rally Image]</div>
+                        <div class="gallery-caption">Janasena Rally Participation</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">[Welfare Distribution Image]</div>
+                        <div class="gallery-caption">Welfare Program Distribution</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">[Infrastructure Development Image]</div>
+                        <div class="gallery-caption">Infrastructure Development</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">[Youth Interaction Image]</div>
+                        <div class="gallery-caption">Youth Leadership Program</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG SECTION -->
+        <section id="blog" class="blog section-padding">
+            <div class="container">
+                <h2 class="section-title">Thoughts & Insights</h2>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <h3 class="blog-title">The Path of Dharmic Politics</h3>
+                        <p class="blog-excerpt">Exploring how traditional values and modern governance can work together to create a just society. Politics should be about service, not power...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </article>
+                    <article class="blog-card">
+                        <h3 class="blog-title">Animal Welfare: A Moral Imperative</h3>
+                        <p class="blog-excerpt">Why protecting animals is not just about compassion but about building a society that values all life. My experiences in cow rescue have taught me...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </article>
+                    <article class="blog-card">
+                        <h3 class="blog-title">Grassroots Democracy in Action</h3>
+                        <p class="blog-excerpt">True political change begins at the community level. Here's how local leaders can make a real difference in people's lives through dedicated service...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <h2 class="section-title">Connect With Me</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong>Phone:</strong> 9666335143
+                            </div>
+                            <div class="contact-item">
+                                <strong>Location:</strong> Virawada, Pithapuram, Kakinada
+                            </div>
+                            <div class="contact-item">
+                                <strong>Email:</strong> contact@janasenapath.org
+                            </div>
+                        </div>
+                        
+                        <div class="social-platforms">
+                            <h4 style="color: var(--janasena-red); margin-bottom: 1rem; font-weight: 600;">Connect on Social Media:</h4>
+                            <div class="social-links">
+                                <a href="#" style="color: var(--text-dark); margin-right: 2rem;">📱 WhatsApp</a>
+                                <a href="#" style="color: var(--text-dark); margin-right: 2rem;">📢 Telegram</a>
+                                <a href="#" style="color: var(--text-dark);">📧 Email</a>
+                            </div>
+                        </div>
+                        
+                        <div class="office-hours" style="margin-top: 2rem; padding: 1.5rem; background: var(--janasena-white); border-radius: 10px; border-left: 4px solid var(--janasena-red);">
+                            <h4 style="color: var(--janasena-red); margin-bottom: 1rem;">Community Office Hours</h4>
+                            <p style="color: var(--text-light); margin-bottom: 0.5rem;">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                            <p style="color: var(--text-light);">Sunday: Available for emergencies</p>
+                        </div>
+                    </div>
+                    
+                    <div class="volunteer-form">
+                        <h3>Join Our Movement</h3>
+                        <p style="margin-bottom: 2rem; color: var(--text-light);">Interested in volunteering or have suggestions for community development? Let's work together for positive change.</p>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message/Suggestion</label>
+                                <textarea id="message" name="message" placeholder="Tell us how you'd like to contribute or share your ideas for community development..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Submit Application</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Made with Commitment to Janasena</h3>
+                <p>Serving the people of Virawada, Pithapuram with dedication and integrity</p>
+                <p>© 2025 Bojja Veera Ram Prasad. All rights reserved.</p>
+                
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                    <a href="#">Telegram</a>
+                </div>
+                
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                    <p style="font-size: 0.9rem; opacity: 0.8;">
+                        "Politics is not about power, it's about service to the people" - Pawan Kalyan
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
